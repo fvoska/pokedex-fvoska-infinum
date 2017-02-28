@@ -1,0 +1,35 @@
+{
+  "name": "pokedex-fvoska-infinum",
+  "version": "1.0.0",
+  "description": "Job application task",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "monitor": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fvoska/pokedex-fvoska-infinum.git"
+  },
+  "keywords": [
+    "pokemon",
+    "infinum",
+    "pokedex"
+  ],
+  "author": "Filip Voska",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fvoska/pokedex-fvoska-infinum/issues"
+  },
+  "homepage": "https://github.com/fvoska/pokedex-fvoska-infinum#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-contrib-uglify": "^2.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ng-annotate": "^3.0.0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Pokedex - Filip Voska - Infinum",
+  "icons": [
+    {
+      "src": "images/icons/app-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#032336",
+  "background_color": "#28536C",
+  "start_url": "index.html",
+  "display": "standalone"
+}
