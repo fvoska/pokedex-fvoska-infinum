@@ -89,6 +89,8 @@ body {
 }
 
 .page-header, #page-wrapper, .navbar {
+  position: relative;
+
   padding: 0.5em 1em;
 
   border: 2px solid #ffffff;
@@ -147,6 +149,10 @@ a {
   text-align: center;
 }
 
+.pokemonId {
+  font-size: 0.5em;
+}
+
 .pokemonArtwork {
   max-width: 100%;
   height: auto;
@@ -201,4 +207,59 @@ hr {
   background-image: -moz-linear-gradient(left, #e0c5c1, #bd2110, #e0c5c1);
   background-image: -ms-linear-gradient(left, #e0c5c1, #bd2110, #e0c5c1);
   background-image: -o-linear-gradient(left, #e0c5c1, #bd2110, #e0c5c1);
+}
+
+.addRemovePokemon {
+  width: 5em;
+  height: 5em;
+  padding: 0.5em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-bottom-left-radius: 16px;
+  color: black;
+}
+
+.addRemovePokemon > i {
+  font-size: 3em;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.5em;
+  margin-left: 0.25em;
+}
+.addRemovePokemon > i:hover {
+  cursor: pointer;
+}
+
+.addRemovePokemonList {
+  position: absolute;
+  font-size: 2em;
+  right: 1em;
+  top: 1em;
+}
+
+.paginationContainer > div {
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.paginationCurrent > input {
+  margin-top: 0;
+  width: 4em;
+  font-size: 1.25em;
+  display: inline-block;
+  text-align: center;
+}
+
+.paginationPrev {
+  padding-top: 0.25em;
+  text-align: left;
+}
+.paginationNext {
+  padding-top: 0.25em;
+  text-align: right;
 }

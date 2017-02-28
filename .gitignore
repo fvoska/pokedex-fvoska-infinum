@@ -16,3 +16,6 @@
 
 # Copied fonts
 /client/fonts
+
+# Logs
+*.log

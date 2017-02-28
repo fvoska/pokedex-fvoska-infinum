@@ -4,5 +4,6 @@ angular.module('pokedex-fvoska-infinum.config', []).constant('CONFIG', {
   APPLICATION_TITLE_SHORT: 'Pokédex',
   BASE_URL: '/',
   API_URL: '//pokeapi.co/api/v2/',
-  DELAY: 125
+  DELAY: 125,
+  PAGE_SIZE: 5
 });

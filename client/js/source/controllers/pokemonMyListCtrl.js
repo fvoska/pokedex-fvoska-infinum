@@ -1,2 +1,3 @@
-angular.module('pokedex-fvoska-infinum').controller('pokemonMyListCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
+angular.module('pokedex-fvoska-infinum').controller('pokemonMyListCtrl', ['$scope', '$rootScope', 'myPokemons', function($scope, $rootScope, myPokemons) {
+  $scope.localPokemons = myPokemons.getPokemons();
 }]);

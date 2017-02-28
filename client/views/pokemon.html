@@ -1,10 +1,14 @@
 <div id="pokemonContainer" ng-controller="pokemonCtrl">
-  <div ng-hide="pokemonDetails" class="loader">
+  <div ng-hide="requestDone" class="loader">
   </div>
   <div ng-show="pokemonDetails">
+    <div class="addRemovePokemon">
+      <i ng-show="myPokemon" ng-click="removePokemon(pokemonDetails.id)" class="fa fa-times" style="color: #bd2110;"aria-hidden="true"></i>
+      <i ng-show="!myPokemon" ng-click="addPokemon(pokemonDetails.id)" class="fa fa-plus" style="color: green;" aria-hidden="true"></i>
+    </div>
 
     <div class="pokemonName pokemonNameLarge">
-      {{ pokemonDetails.name }}
+      {{ pokemonDetails.name }} <span class="pokemonId">#{{ pokemonDetails.id }}</span>
     </div>
     <img class="pokemonArtwork" src="bower_components/pokemon-sprites/sprites/pokemon/other-sprites/official-artwork/{{ pokemonDetails.id }}.png">
     <!--<center>
@@ -69,5 +73,13 @@
       </div>
     </div>
 
+  </div>
+  <div ng-show="requestDone && !pokemonDetails">
+    <div style="font-size: 20em; text-align: center;">
+      ?
+    </div>
+    <div style="font-size: 1.5em; text-align: center;">
+      Pokémon not found.
+    </div>
   </div>
 </div>

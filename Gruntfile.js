@@ -24,7 +24,7 @@ module.exports = function(grunt) {
         files: {
           '<%= grunt.option("stylesDestDir") %>style.min.css': [
             bowerDir + 'bootstrap/dist/css/bootstrap.min.css',
-            bowerDir + 'font-awesome-min/css/font-awesome.min.css',
+            bowerDir + 'font-awesome-bower/css/font-awesome.css',
             bowerDir + 'angular-loading-bar/build/loading-bar.min.css',
             stylesDir + 'style.css'
           ]
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
           '<%= grunt.option("scriptsSafeDestDir") %>ngEnterDir.js': [scriptsDir + 'directives/ngEnterDir.js'],
           '<%= grunt.option("scriptsSafeDestDir") %>pokemonDetailDir.js': [scriptsDir + 'directives/pokemonDetailDir.js'],
           '<%= grunt.option("scriptsSafeDestDir") %>pokemonListDir.js': [scriptsDir + 'directives/pokemonListDir.js'],
-          '<%= grunt.option("scriptsSafeDestDir") %>myPokemonSrv.js': [scriptsDir + 'services/myPokemonSrv.js'],
+          '<%= grunt.option("scriptsSafeDestDir") %>myPokemonsSrv.js': [scriptsDir + 'services/myPokemonsSrv.js'],
           '<%= grunt.option("scriptsSafeDestDir") %>pokemonApiSrv.js': [scriptsDir + 'services/pokemonApiSrv.js']
         }
       }
@@ -92,7 +92,7 @@ module.exports = function(grunt) {
             scriptsSafeDestDir + 'ngEnterDir.js',
             scriptsSafeDestDir + 'pokemonDetailDir.js',
             scriptsSafeDestDir + 'pokemonListDir.js',
-            scriptsSafeDestDir + 'myPokemonSrv.js',
+            scriptsSafeDestDir + 'myPokemonsSrv.js',
             scriptsSafeDestDir + 'pokemonApiSrv.js'
           ]
         }
