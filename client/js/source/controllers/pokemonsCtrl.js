@@ -37,6 +37,8 @@ angular.module('pokedex-fvoska-infinum').controller('pokemonsCtrl', ['$scope', '
   $scope.pagination = {};
   $scope.pagination.pageSize = CONFIG.PAGE_SIZE;
   $scope.pagination.pageNumber = 1;
+  $scope.pagination.min = CONFIG.MIN_PAGE;
+  $scope.pagination.max = CONFIG.MAX_PAGE;
 
   function myPokemonsDoneCheck(i) {
     if (i >= Math.min(myPokemonsCount, $scope.pagination.pageSize)) {
@@ -51,8 +53,14 @@ angular.module('pokedex-fvoska-infinum').controller('pokemonsCtrl', ['$scope', '
   }
 
   function getMyPokemons() {
-    $scope.myPokemons = myPokemons.getPokemons();
-    myPokemonsCount = $scope.myPokemons.length;
+    var pokes = myPokemons.getPokemons();
+    myPokemonsCount = pokes.length;
+    $rootScope.myPokemonsCount = myPokemonsCount;
+    $scope.pagination.min = CONFIG.MIN_PAGE;
+    $scope.pagination.max = Math.ceil(pokes.length / $scope.pagination.pageSize);
+    var min = $scope.pagination.pageSize * ($scope.pagination.pageNumber) - $scope.pagination.pageSize + 1;
+    var max = $scope.pagination.pageNumber * $scope.pagination.pageSize;
+    $scope.myPokemons = pokes.slice(min - 1, max);
     $scope.pokemons = [];
     $scope.start();
     var i = 0;
@@ -69,6 +77,8 @@ angular.module('pokedex-fvoska-infinum').controller('pokemonsCtrl', ['$scope', '
   }
 
   function getAllPokemons() {
+    $scope.pagination.min = CONFIG.MIN_PAGE;
+    $scope.pagination.max = CONFIG.MAX_PAGE;
     $scope.pokemons = [];
     $scope.start();
     var j = 0;

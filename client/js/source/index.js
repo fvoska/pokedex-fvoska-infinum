@@ -46,7 +46,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 'CONFIG
           templateUrl: CONFIG.BASE_URL + 'views/pokemonDetail.html'
         }
       },
-      navId: 'pokemonMyList',
+      navId: 'pokemonList',
       title: ''
     });
 

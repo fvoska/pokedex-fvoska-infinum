@@ -11,14 +11,15 @@
     </div>
   </div>
   <div class="row paginationContainer">
-    <div class="col-xs-4 paginationPrev" ng-click="pagination.pageNumber = Math.max(1, pagination.pageNumber - 1); page()">
-      <i class="fa fa-angle-left" aria-hidden="true"></i> Previous
+    <div class="col-xs-4 col-md-5 paginationPrev">
+      <button ng-disabled="pagination.disable" ng-click="pagination.pageNumber = Math.max(pagination.min, pagination.pageNumber - 1); page()"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
     </div>
-    <div class="col-xs-4 paginationCurrent">
-      <input type="text" class="form-control" ng-enter="page()" ng-model="pagination.pageNumber">
+    <div class="col-xs-4 col-md-2 paginationCurrent">
+      <input type="range" ng-hide="true" ng-model="pagination.pageNumber" min="{{ pagination.min }}" max="{{ pagination.max }}">
+      <input ng-disabled="pagination.disable" type="number" class="form-control" ng-enter="page()" ng-model="pagination.pageNumber">
     </div>
-    <div class="col-xs-4 paginationNext" ng-click="pagination.pageNumber = Math.min(15, pagination.pageNumber + 1); page()">
-      Next <i class="fa fa-angle-right" aria-hidden="true"></i>
+    <div class="col-xs-4 col-md-5 paginationNext">
+      <button ng-disabled="pagination.disable" ng-click="pagination.pageNumber = Math.min(pagination.max, pagination.pageNumber + 1); page()"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
     </div>
   </div>
 </div>

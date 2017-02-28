@@ -5,5 +5,7 @@ angular.module('pokedex-fvoska-infinum.config', []).constant('CONFIG', {
   BASE_URL: '/',
   API_URL: '//pokeapi.co/api/v2/',
   DELAY: 125,
-  PAGE_SIZE: 5
+  PAGE_SIZE: 4,
+  MIN_PAGE: 1,
+  MAX_PAGE: 15
 });

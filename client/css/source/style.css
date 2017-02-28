@@ -244,22 +244,51 @@ hr {
 
 .paginationContainer > div {
   font-size: 1.25em;
+}
+
+.paginationCurrent {
   text-align: center;
 }
 
 .paginationCurrent > input {
-  margin-top: 0;
   width: 4em;
   font-size: 1.25em;
   display: inline-block;
+  margin: auto;
   text-align: center;
 }
 
 .paginationPrev {
-  padding-top: 0.25em;
-  text-align: left;
+  text-align: right;
 }
 .paginationNext {
-  padding-top: 0.25em;
-  text-align: right;
+  text-align: left;
+}
+
+.paginationNext > button, .paginationPrev > button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin: 0 1em;
+  display: inline-block;
+  padding: 0;
+  font-size: 1.5em;
+  padding-top: 2px;
+}
+
+.myPokemonsCount {
+  text-align: center;
+}
+
+.search {
+  font-size: 1.5em;
+}
+
+.search > a {
+  font-size: 1.25em;
+  line-height: 34px;
+}
+
+.search > input {
+  font-size: 1em;
 }

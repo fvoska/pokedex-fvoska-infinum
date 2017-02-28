@@ -1,3 +1,14 @@
 <div id="pokemonListContainer" ng-controller="pokemonListCtrl">
+  <div class="row">
+    <div class="col-xs-8 search">
+      <input type="text" class="form-control" ng-enter="search(searchValue)" placeholder="Pokemon name or #" ng-model="searchValue">
+    </div>
+    <div class="col-xs-4 search">
+      <a id="search" href="pokemons/{{ searchValue }}">Search</a>
+    </div>
+  </div>
+
+  <hr>
+
   <pokemons></pokemons>
 </div>
