@@ -43,16 +43,19 @@ angular.module('pokedex-fvoska-infinum').controller('pokemonsCtrl', ['$scope', '
   function myPokemonsDoneCheck(i) {
     if (i >= Math.min(myPokemonsCount, $scope.pagination.pageSize)) {
       $scope.complete();
+      $scope.pagination.disable = false;
     }
   }
 
   function allPokemonsDoneCheck(i) {
     if (i >= $scope.pagination.pageSize) {
       $scope.complete();
+      $scope.pagination.disable = false;
     }
   }
 
   function getMyPokemons() {
+    $scope.pagination.disable = true;
     var pokes = myPokemons.getPokemons();
     myPokemonsCount = pokes.length;
     $rootScope.myPokemonsCount = myPokemonsCount;
@@ -77,6 +80,7 @@ angular.module('pokedex-fvoska-infinum').controller('pokemonsCtrl', ['$scope', '
   }
 
   function getAllPokemons() {
+    $scope.pagination.disable = true;
     $scope.pagination.min = CONFIG.MIN_PAGE;
     $scope.pagination.max = CONFIG.MAX_PAGE;
     $scope.pokemons = [];

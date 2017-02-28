@@ -15,7 +15,7 @@
       <button ng-disabled="pagination.disable" ng-click="pagination.pageNumber = Math.max(pagination.min, pagination.pageNumber - 1); page()"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
     </div>
     <div class="col-xs-4 col-md-2 paginationCurrent">
-      <input type="range" ng-hide="true" ng-model="pagination.pageNumber" min="{{ pagination.min }}" max="{{ pagination.max }}">
+      <input type="range" style="display: none!important;" ng-model="pagination.pageNumber" min="{{ pagination.min }}" max="{{ pagination.max }}">
       <input ng-disabled="pagination.disable" type="number" class="form-control" ng-enter="page()" ng-model="pagination.pageNumber">
     </div>
     <div class="col-xs-4 col-md-5 paginationNext">

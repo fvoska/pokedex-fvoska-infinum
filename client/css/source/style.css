@@ -210,8 +210,8 @@ hr {
 }
 
 .addRemovePokemon {
-  width: 5em;
-  height: 5em;
+  width: 3em;
+  height: 3em;
   padding: 0.5em;
   position: absolute;
   top: 0;
@@ -225,7 +225,7 @@ hr {
 }
 
 .addRemovePokemon > i {
-  font-size: 3em;
+  font-size: 1.5em;
   text-align: center;
   vertical-align: middle;
   line-height: 1.5em;
@@ -277,6 +277,7 @@ hr {
 }
 
 .myPokemonsCount {
+  font-size: 2em;
   text-align: center;
 }
 
