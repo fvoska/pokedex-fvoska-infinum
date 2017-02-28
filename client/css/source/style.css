@@ -84,6 +84,21 @@ body {
   }
 }
 
+.loaderOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 100px;
+  z-index: 999;
+  background: rgba(255,255,255, 0.5);
+}
+
+#pokemonsContainer {
+  min-height: 300px;
+}
+
 #wrapper {
   padding-bottom: 1em;
 }

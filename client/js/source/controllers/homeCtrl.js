@@ -7,8 +7,10 @@ angular.module('pokedex-fvoska-infinum').controller('homeCtrl', ['$scope', '$roo
     cfpLoadingBar.complete();
   };
 
+  // Start loading bar.
   $scope.start();
 
+  // "Fake" loading bar completion.
   setTimeout(function() {
     $scope.complete();
   }, CONFIG.DELAY);

@@ -1,4 +1,5 @@
 angular.module('pokedex-fvoska-infinum').directive('pokemon', ['CONFIG', function(CONFIG) {
+  // Pokemon's details directive.
   return {
     restrict: 'E',
     scope: {

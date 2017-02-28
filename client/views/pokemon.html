@@ -1,6 +1,5 @@
 <div id="pokemonContainer" ng-controller="pokemonCtrl">
-  <div ng-hide="requestDone" class="loader">
-  </div>
+  <div ng-hide="requestDone" class="loader"></div>
   <div ng-show="pokemonDetails">
     <div class="addRemovePokemon">
       <i ng-show="myPokemon" ng-click="removePokemon(pokemonDetails.id)" class="fa fa-times" style="color: #bd2110;"aria-hidden="true"></i>

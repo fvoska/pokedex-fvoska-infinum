@@ -1,6 +1,9 @@
 angular.module('pokedex-fvoska-infinum').factory('myPokemons', [function() {
+  // Service for saving pokemons in local storage.
+  // Currently only IDs are stored, it can be expanded to store comments/nicknames for specific pokemons.
   var myPokemons = {};
 
+  // Adds pokemon to local storage.
   myPokemons.addPokemon = function(id) {
     var myps = JSON.parse(localStorage.getItem('myPokemons'));
     if (!myps) myps = [];
@@ -21,6 +24,7 @@ angular.module('pokedex-fvoska-infinum').factory('myPokemons', [function() {
     }
   };
 
+  // Adds pokemon from local storage.
   myPokemons.removePokemon = function(id) {
     var myps = JSON.parse(localStorage.getItem('myPokemons'));
     if (!myps) myps = [];
@@ -41,6 +45,7 @@ angular.module('pokedex-fvoska-infinum').factory('myPokemons', [function() {
     }
   };
 
+  // Checks, by ID, if pokemon is in local storage.
   myPokemons.hasPokemon = function(id) {
     var myps = JSON.parse(localStorage.getItem('myPokemons'));
     if (!myps) myps = [];
@@ -59,6 +64,7 @@ angular.module('pokedex-fvoska-infinum').factory('myPokemons', [function() {
     }
   };
 
+  // Gets all pokemons from local storage.
   myPokemons.getPokemons = function() {
     return JSON.parse(localStorage.getItem('myPokemons'));
   };

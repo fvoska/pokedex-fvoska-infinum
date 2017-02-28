@@ -1,4 +1,7 @@
 <div id="pokemonsContainer" ng-controller="pokemonsCtrl">
+  <div ng-show="pagination.disable" class="loaderOverlay">
+    <div class="loader"></div>
+  </div>
   <div class="row">
     <div ng-repeat="pokemon in pokemons" class="col-xs-12 col-md-6">
       <img src="bower_components/pokemon-sprites/sprites/pokemon/{{ pokemon.id }}.png">

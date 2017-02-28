@@ -7,7 +7,6 @@ app.config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
 
 app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 'CONFIG', function($stateProvider, $urlRouterProvider, $locationProvider, CONFIG) {
   // Set up states.
-
   $urlRouterProvider.otherwise('/');
 
   $stateProvider

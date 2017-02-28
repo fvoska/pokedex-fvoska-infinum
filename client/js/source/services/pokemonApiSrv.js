@@ -1,6 +1,8 @@
 angular.module('pokedex-fvoska-infinum').factory('pokemonApi', ['$http', '$q', 'CONFIG', function($http, $q, CONFIG) {
+  // Wrapper for pokeapi.co requests.
   var pokemonApi = {};
 
+  // Gets pokemons from min ID to max ID. Results are returned once all requests complete === slow.
   pokemonApi.getPokemons = function(min, max, callback) {
     var numFetched = 0;
     var pokemons = [];
@@ -25,6 +27,8 @@ angular.module('pokedex-fvoska-infinum').factory('pokemonApi', ['$http', '$q', '
     });
   };
 
+  // Get's specific pokemon's details.
+  // For fetching mulitple pokemons, this is better option than getPokemons since it returns pokemon's details when they are fetched so fetch information can be displayed immediately.
   pokemonApi.getPokemon = function(id, callback) {
     var pokemonDetails = {};
     pokemonDetails.id = id;
