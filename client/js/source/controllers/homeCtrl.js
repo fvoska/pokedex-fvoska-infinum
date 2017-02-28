@@ -1,4 +1,4 @@
-angular.module('pokedex-fvoska-infinum').controller('homeCtrl', ['$scope', 'cfpLoadingBar', function($scope, cfpLoadingBar) {
+angular.module('pokedex-fvoska-infinum').controller('homeCtrl', ['$scope', '$rootScope', 'cfpLoadingBar', 'CONFIG', function($scope, $rootScope, cfpLoadingBar, CONFIG) {
   $scope.start = function() {
     cfpLoadingBar.start();
   };
@@ -11,5 +11,5 @@ angular.module('pokedex-fvoska-infinum').controller('homeCtrl', ['$scope', 'cfpL
 
   setTimeout(function() {
     $scope.complete();
-  }, 250);
+  }, CONFIG.DELAY);
 }]);

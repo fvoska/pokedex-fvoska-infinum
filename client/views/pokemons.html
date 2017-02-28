@@ -1,0 +1,7 @@
+<div id="pokemonsContainer" ng-controller="pokemonsCtrl">
+  <div ng-repeat="pokemon in pokemons">
+    <img src="bower_components/pokemon-sprites/sprites/pokemon/{{ pokemon.id }}.png">
+    <a ng-if="!myPokemons" href="pokemons/{{ pokemon.id }}" class="pokemonName">{{ pokemon.name }}</a>
+    <a ng-if="myPokemons" href="me/pokemons/{{ pokemon.id }}" class="pokemonName">{{ pokemon.name }}</a>
+  </div>
+</div>

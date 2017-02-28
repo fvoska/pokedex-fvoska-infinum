@@ -50,10 +50,16 @@ module.exports = function(grunt) {
           '<%= grunt.option("scriptsSafeDestDir") %>config.js': [scriptsDir + 'config.js'],
           '<%= grunt.option("scriptsSafeDestDir") %>index.js': [scriptsDir + 'index.js'],
           '<%= grunt.option("scriptsSafeDestDir") %>homeCtrl.js': [scriptsDir + 'controllers/homeCtrl.js'],
+          '<%= grunt.option("scriptsSafeDestDir") %>pokemonsCtrl.js': [scriptsDir + 'controllers/pokemonsCtrl.js'],
+          '<%= grunt.option("scriptsSafeDestDir") %>pokemonCtrl.js': [scriptsDir + 'controllers/pokemonCtrl.js'],
+          '<%= grunt.option("scriptsSafeDestDir") %>pokemonDetailCtrl.js': [scriptsDir + 'controllers/pokemonDetailCtrl.js'],
+          '<%= grunt.option("scriptsSafeDestDir") %>pokemonListCtrl.js': [scriptsDir + 'controllers/pokemonListCtrl.js'],
+          '<%= grunt.option("scriptsSafeDestDir") %>pokemonMyListCtrl.js': [scriptsDir + 'controllers/pokemonMyListCtrl.js'],
           '<%= grunt.option("scriptsSafeDestDir") %>ngEnterDir.js': [scriptsDir + 'directives/ngEnterDir.js'],
-          '<%= grunt.option("scriptsSafeDestDir") %>pokeDetailDir.js': [scriptsDir + 'directives/pokeDetailDir.js'],
-          '<%= grunt.option("scriptsSafeDestDir") %>pokeListDir.js': [scriptsDir + 'directives/pokeListDir.js'],
-          '<%= grunt.option("scriptsSafeDestDir") %>myPokemonSrv.js': [scriptsDir + 'services/myPokemonSrv.js']
+          '<%= grunt.option("scriptsSafeDestDir") %>pokemonDetailDir.js': [scriptsDir + 'directives/pokemonDetailDir.js'],
+          '<%= grunt.option("scriptsSafeDestDir") %>pokemonListDir.js': [scriptsDir + 'directives/pokemonListDir.js'],
+          '<%= grunt.option("scriptsSafeDestDir") %>myPokemonSrv.js': [scriptsDir + 'services/myPokemonSrv.js'],
+          '<%= grunt.option("scriptsSafeDestDir") %>pokemonApiSrv.js': [scriptsDir + 'services/pokemonApiSrv.js']
         }
       }
     },
@@ -78,10 +84,16 @@ module.exports = function(grunt) {
             scriptsSafeDestDir + 'config.js',
             scriptsSafeDestDir + 'index.js',
             scriptsSafeDestDir + 'homeCtrl.js',
+            scriptsSafeDestDir + 'pokemonsCtrl.js',
+            scriptsSafeDestDir + 'pokemonCtrl.js',
+            scriptsSafeDestDir + 'pokemonDetailCtrl.js',
+            scriptsSafeDestDir + 'pokemonListCtrl.js',
+            scriptsSafeDestDir + 'pokemonMyListCtrl.js',
             scriptsSafeDestDir + 'ngEnterDir.js',
-            scriptsSafeDestDir + 'pokeDetailDir.js',
-            scriptsSafeDestDir + 'pokeListDir.js',
-            scriptsSafeDestDir + 'myPokemonSrv.js'
+            scriptsSafeDestDir + 'pokemonDetailDir.js',
+            scriptsSafeDestDir + 'pokemonListDir.js',
+            scriptsSafeDestDir + 'myPokemonSrv.js',
+            scriptsSafeDestDir + 'pokemonApiSrv.js'
           ]
         }
       }

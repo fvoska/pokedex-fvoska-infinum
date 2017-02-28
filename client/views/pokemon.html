@@ -1,0 +1,73 @@
+<div id="pokemonContainer" ng-controller="pokemonCtrl">
+  <div ng-hide="pokemonDetails" class="loader">
+  </div>
+  <div ng-show="pokemonDetails">
+
+    <div class="pokemonName pokemonNameLarge">
+      {{ pokemonDetails.name }}
+    </div>
+    <img class="pokemonArtwork" src="bower_components/pokemon-sprites/sprites/pokemon/other-sprites/official-artwork/{{ pokemonDetails.id }}.png">
+    <!--<center>
+      <img class="pokemonArtworkSmall" src="bower_components/pokemon-sprites/sprites/pokemon/{{ pokemonDetails.id }}.png">
+      <img class="pokemonArtworkSmall" src="bower_components/pokemon-sprites/sprites/pokemon/back/{{ pokemonDetails.id }}.png">
+    </center>-->
+
+    <hr>
+
+    <div class="row">
+      <div class="detailsTitle">
+        Type
+      </div>
+      <div class="stats col-xs-6 col-md-4" ng-repeat="type in pokemonDetails.types">
+        <img src="images/icons/types/{{ type.type.name }}.png"> {{ type.type.name }}
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="detailsTitle">
+        Stats
+      </div>
+      <div class="stats col-xs-6 col-md-4">
+        Weight
+        <div class="statNumber" ng-class="{
+            'color-red': pokemonDetails.weight >= 75,
+            'color-blue': pokemonDetails.weight >= 50 && pokemonDetails.weight < 75,
+            'color-green': pokemonDetails.weight < 50
+          }">{{ pokemonDetails.weight }}</div>
+      </div>
+      <div class="stats col-xs-6 col-md-4" ng-repeat="stat in pokemonDetails.stats">
+        {{ stat.stat.name }}
+        <div class="statNumber" ng-class="{
+          'color-red': stat.base_stat < 50,
+          'color-blue': stat.base_stat >= 50 && stat.base_stat < 75,
+          'color-green': stat.base_stat >= 75
+        }">{{ stat.base_stat }}</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="detailsTitle">
+        Abilities
+      </div>
+      <div class="ability col-xs-6 col-md-4" ng-repeat="ability in pokemonDetails.abilities">
+        {{ ability.ability.name }}
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="detailsTitle">
+        Moves
+      </div>
+      <div class="ability col-xs-6 col-md-4" ng-repeat="move in pokemonDetails.moves" ng-if="move.version_group_details[0].move_learn_method.name !== 'machine'">
+        {{ move.move.name }}
+      </div>
+    </div>
+
+  </div>
+</div>
