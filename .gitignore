@@ -1,0 +1,18 @@
+# Dependency directories
+/node_modules
+/client/bower_components
+
+# Editor files
+.jshintrc
+.tern-project
+.tags_swap
+.tags
+
+# Minification files
+/client/css/style.min.css
+/client/js/min-safe
+/client/js/app.min.js
+/client/js/app.js.map
+
+# Copied fonts
+/client/fonts
