@@ -1,5 +1,4 @@
 body {
-  background: #bd2110;
   background: url('/images/background/pokedex.png');
   background-attachment: fixed;
   color: black;
@@ -110,7 +109,6 @@ body {
 
   border: 2px solid #ffffff;
 
-  background: #eec7c3;
   background: rgba(255,255,255,0.75);
 
   border-radius: 4px;
