@@ -1,10 +1,10 @@
 <div id="pokemonListContainer" ng-controller="pokemonListCtrl">
   <div class="row">
     <div class="col-xs-8 search">
-      <input type="text" class="form-control" ng-enter="search(searchValue)" placeholder="Pokemon name or #" ng-model="searchValue">
+      <input type="text" class="form-control" ng-enter="search(searchValue.toLowerCase())" placeholder="Pokemon name or #" ng-model="searchValue">
     </div>
     <div class="col-xs-4 search">
-      <a id="search" href="pokemons/{{ searchValue }}">Search</a>
+      <a id="search" href="pokemons/{{ searchValue.toLowerCase() }}">Search</a>
     </div>
   </div>
 
