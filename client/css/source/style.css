@@ -1,7 +1,6 @@
 body {
   background-color: #bd2110;
-  background-image: url('/images/background/pokedex.png');
-  background-attachment: fixed;
+  background-image: url("/images/background/pokedex.png");
   color: black;
   text-shadow: 0 0 4px #ffffff;
   font-family: 'VT323', monospace;
