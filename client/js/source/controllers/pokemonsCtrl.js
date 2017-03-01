@@ -95,6 +95,12 @@ angular.module('pokedex-fvoska-infinum').controller('pokemonsCtrl', ['$scope', '
     // Start loading bar.
     $scope.start();
 
+    // 0 Pokemons.
+    if (myPokemonsCount === 0) {
+      $scope.pagination.disable = false;
+      $scope.complete();
+    }
+
     // Fetch all pokemons' details.
     var i = 0;
     $scope.myPokemons.forEach(function(pokemon) {

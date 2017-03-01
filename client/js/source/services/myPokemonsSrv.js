@@ -66,7 +66,9 @@ angular.module('pokedex-fvoska-infinum').factory('myPokemons', [function() {
 
   // Gets all pokemons from local storage.
   myPokemons.getPokemons = function() {
-    return JSON.parse(localStorage.getItem('myPokemons'));
+    var myps = JSON.parse(localStorage.getItem('myPokemons'));
+    if (!myps) myps = [];
+    return myps;
   };
 
   return myPokemons;
