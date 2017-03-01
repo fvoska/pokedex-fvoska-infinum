@@ -102,6 +102,10 @@ body {
   padding-bottom: 1em;
 }
 
+#wrapper > div, #wrapper > nav {
+  box-shadow: 0 0 1em black;
+}
+
 .page-header, #page-wrapper, .navbar {
   position: relative;
 
@@ -144,8 +148,8 @@ a {
   display: inline-block;
   width: 49%;
   text-align: center;
-  font-size: 1.25em;
-  margin-top: 0.5em;
+  font-size: 1.5em;
+  margin-top: 0.33em;
 }
 
 .active {
