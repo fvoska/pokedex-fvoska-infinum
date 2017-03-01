@@ -10,7 +10,7 @@ angular.module('pokedex-fvoska-infinum').factory('pokemonApi', ['$http', '$q', '
       return $http({
         method: "GET",
         cache: true,
-        url: CONFIG.API_URL + 'pokemon/' + i
+        url: CONFIG.API_URL + 'pokemon/' + i + '/'
       }).then(function (response) {
         pokemons.push(response.data);
         numFetched++;
@@ -35,7 +35,7 @@ angular.module('pokedex-fvoska-infinum').factory('pokemonApi', ['$http', '$q', '
     $http({
       method: "GET",
       cache: true,
-      url: CONFIG.API_URL + 'pokemon/' + id
+      url: CONFIG.API_URL + 'pokemon/' + id + '/'
     }).then(function (response) {
       callback(response.data);
     }, function (response) {
