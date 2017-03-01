@@ -1,5 +1,6 @@
 body {
-  background: url('/images/background/pokedex.png');
+  background-color: #bd2110;
+  background-image: url('/images/background/pokedex.png');
   background-attachment: fixed;
   color: black;
   text-shadow: 0 0 4px #ffffff;
@@ -91,11 +92,11 @@ body {
   right: 0;
   padding-top: 10px;
   z-index: 999;
-  background: rgba(255,255,255, 0.5);
+  background-color: rgba(255,255,255, 0.5);
 }
 
 #pokemonsContainer {
-  min-height: 200px;
+  min-height: 150px;
 }
 
 #wrapper {
@@ -109,7 +110,7 @@ body {
 
   border: 2px solid #ffffff;
 
-  background: rgba(255,255,255,0.75);
+  background-color: rgba(255,255,255,0.75);
 
   border-radius: 4px;
 }

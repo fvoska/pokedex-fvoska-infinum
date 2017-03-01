@@ -3,7 +3,7 @@
     <div class="loader"></div>
   </div>
   <div class="row">
-    <div ng-repeat="pokemon in pokemons" class="col-xs-12 col-md-6">
+    <div ng-repeat="pokemon in pokemons | orderBy: 'id'" class="col-xs-12 col-md-6">
       <img src="bower_components/pokemon-sprites/sprites/pokemon/{{ pokemon.id }}.png">
       <a ng-if="!myPokemons" href="pokemons/{{ pokemon.id }}" class="pokemonName">{{ pokemon.name }}</a>
       <a ng-if="myPokemons" href="me/pokemons/{{ pokemon.id }}" class="pokemonName">{{ pokemon.name }}</a>
