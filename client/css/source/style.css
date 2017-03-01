@@ -90,13 +90,13 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  padding-top: 100px;
+  padding-top: 10px;
   z-index: 999;
   background: rgba(255,255,255, 0.5);
 }
 
 #pokemonsContainer {
-  min-height: 300px;
+  min-height: 200px;
 }
 
 #wrapper {

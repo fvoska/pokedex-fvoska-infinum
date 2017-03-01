@@ -49,7 +49,11 @@ angular.module('pokedex-fvoska-infinum').controller('pokemonsCtrl', ['$scope', '
 
   // Check if my pokemons for current page are fetched (multiple requests - 1 pokemon = 1 request)
   function myPokemonsDoneCheck(k) {
-    if (k >= Math.min(myPokemonsCount, $scope.pagination.pageSize)) {
+    var toShow = 4;
+    if ($scope.pagination.pageNumber * $scope.pagination.pageSize > myPokemonsCount) {
+      toShow = Math.min(myPokemonsCount, $scope.pagination.pageNumber * $scope.pagination.pageSize) % $scope.pagination.pageSize;
+    }
+    if (k >= toShow) {
       $scope.complete();
       $scope.pagination.disable = false;
     }
